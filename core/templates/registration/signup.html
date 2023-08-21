@@ -6,11 +6,25 @@
 <div class="login">
     <div class="form">
      <p class="red-text">{{ error_message }}</p>
-        <form class="login-form" method="POST" action="{% url 'login' %}">
+        <form class="login-form" method="POST" action="{% url 'signup' %}">
             {% csrf_token %}
-            {{ form.as_p }}
+            <label for="">Username:</label>
+            {{ form.username }}
+            <label for="">150 or fewer. Letters, digits @/./+/-/_ only.</label>
+            <br>
+            <br>
+            <label for="">Password:</label>
+            {{ form.password1 }}
+            <label for="">This field is required.</label>
+            <br>
+            <br>
+            <label for="">Password confirmation:</label>
+            {{ form.password2 }}
+            <label for="">Enter the same password as before, for verification.</label>
+            <br>
+            <br>
             <input type="hidden" name="next" value="{{ next }}">
-            <button type="submit" class="btn">Log In</button>
+            <button type="submit" class="btn">Sign up</button>
         </form>
     </div>
 </div>
