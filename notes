@@ -22,3 +22,5 @@ DJANGO
   we then create the html files.
   we then connect those html files to view.py to render all the files.
   we then connect the view.py file to our urls.py file
+
+* 

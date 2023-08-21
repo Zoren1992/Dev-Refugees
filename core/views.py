@@ -1,15 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
+from . models import User, Answer, Question, Tag
 
-from item.models import Category, Item
-
-def index(request):
-  items = Item.objects.filter(is_sold=False)[0:6]
-  category = Category.objects.all()
-  
-  return render(request, 'core/index.html', {
-    
-    'items': items
-  })
-
-def contact(request):
-  return render(request, 'core/contact.html')
