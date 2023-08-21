@@ -3,11 +3,16 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <h1>Please enter your account information</h1>
-    <form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn">Log In</button>
-    </form>
+<div class="login">
+    <div class="form">
+        <p class="red-text">{{ error_message }}</p>
+        <form class="login-form" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button type="submit" class="btn">Log In</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
+
