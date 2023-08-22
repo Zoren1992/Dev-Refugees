@@ -32,3 +32,7 @@ def signup(request):
 
 def profile(request):
   return render(request, 'devs/profile.html')
+
+class questions_create(CreateView):
+  model = Question
+  fields = ['title', 'content', 'category']
