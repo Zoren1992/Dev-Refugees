@@ -8,41 +8,79 @@ h1 {
   width: 500px;
   margin: auto;
 }
+
 .form {
-    position: relative;
-    background: #FFFFFF;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
+  position: relative;
+  background: #FFFFFF;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
 
 .form input {
-    font-family: "Lato", sans-serif;
-    outline: 0;
-    background: #e7e4e4;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
+  font-family: "Lato", sans-serif;
+  outline: 0;
+  background: #e7e4e4;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
 .form button {
-    font-family: "Lato", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background:  rgb(85, 181, 166);
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    transition: all 0.8 ease;
-    cursor: pointer;
-  }
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:  rgb(85, 181, 166);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.8 ease;
+  cursor: pointer;
+}
 
 .form button:hover,.form button:active,.form button:focus {
-    background: rgb(108, 114, 127)
-  }
+  background: rgb(108, 114, 127)
+}
 
+.profile-container {
+  border: thick double #32a1ce;
+}
+
+.profile-top, .profile-bottom {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border: thick double #32a1ce;
+}
+
+.profile-img {
+  max-width: 100%;
+  width: 25%;
+}
+
+.about {
+  max-width: 100%;
+  width: 50%;
+}
+
+.img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 100%;
+  
+}
+
+.img, .about {
+  border: thick double #32a1ce;
+}
+
+.answers, .questions {
+  max-width: 50%;
+  width: 50%;
+  border: thick double #32a1ce;
+}

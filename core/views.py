@@ -29,3 +29,6 @@ def signup(request):
   # A bad POST or a GET request, so render signup.html with an empty form
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+def profile(request):
+  return render(request, 'devs/profile.html')
