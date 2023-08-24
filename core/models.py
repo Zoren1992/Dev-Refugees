@@ -25,13 +25,13 @@ class User(models.Model):
 
 class Answer(models.Model):
     content = models.TextField(max_length=255)
-    creationtime = models.DateField('Created At ', auto_now_add=True, null=True)
+    creationtime = models.DateTimeField('Created At ', null=True)
     user_fk = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     class Meta:
         ordering = ['-creationtime']
 
     def __str__(self):
-        return self.body[0:50]
+        return self.content
 
 class Question(models.Model):
     title = models.CharField(max_length=100)
@@ -42,7 +42,7 @@ class Question(models.Model):
         default = CATEGORIES[0][0]
     )
     participants = models.ManyToManyField(User, related_name='participants')
-    creationtime = models.DateField('Created At ', auto_now_add=True, null=True)
+    creationtime = models.DateTimeField('Created At ', null=True)
     user_fk = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:
