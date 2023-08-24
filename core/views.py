@@ -35,4 +35,4 @@ def profile(request):
 
 class questions_create(CreateView):
   model = Question
-  fields = ['title', 'content', 'category']
+  fields = ['title', 'content', 'category', 'creationtime']
